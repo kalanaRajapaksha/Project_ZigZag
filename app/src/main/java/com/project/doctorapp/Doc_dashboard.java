@@ -77,5 +77,14 @@ Button create,refresh;
             }
         };
 
+    public void vieHome(View view){
+        Intent in = new Intent(Doc_dashboard.this, app1page.class);
+        startActivity(in);
+    }
+
+    public void profile(View view){
+        Intent in = new Intent(Doc_dashboard.this, DoctorViewProfile.class);
+        startActivity(in);
+    }
 
     }

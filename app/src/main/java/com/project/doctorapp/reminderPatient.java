@@ -71,4 +71,14 @@ public class reminderPatient extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(this,"Cancelled", Toast.LENGTH_SHORT).show();
             }
         }
+
+    public void vieHome(View view){
+        Intent in = new Intent(reminderPatient.this, Pat_dashboard.class);
+        startActivity(in);
     }
+
+    public void profile(View view){
+        Intent in = new Intent(reminderPatient.this, PatientViewProfile.class);
+        startActivity(in);
+    }
+}

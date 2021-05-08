@@ -1,5 +1,6 @@
 package com.project.doctorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -60,5 +61,13 @@ public class CreatePatientProfileActivity extends AppCompatActivity {
         });
     }
 
+    public void vieHome(View view){
+        Intent in = new Intent(CreatePatientProfileActivity.this, app1page.class);
+        startActivity(in);
+    }
 
+    public void profile(View view){
+        Intent in = new Intent(CreatePatientProfileActivity.this, PatientViewProfile.class);
+        startActivity(in);
+    }
 }

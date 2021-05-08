@@ -2,6 +2,7 @@ package com.project.doctorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,4 +55,14 @@ TextView cName;
 
         }
     };
+
+    public void vieHome(View view){
+        Intent in = new Intent(PatientViewActivity.this, app1page.class);
+        startActivity(in);
+    }
+
+    public void profile(View view){
+        Intent in = new Intent(PatientViewActivity.this, PatientViewProfile.class);
+        startActivity(in);
+    }
 }

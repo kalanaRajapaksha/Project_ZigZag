@@ -28,8 +28,9 @@
             android:id="@+id/imageView5"
             android:layout_width="100dp"
             android:layout_height="102dp"
-            android:src="@drawable/logo"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp"
+            android:onClick="vieHome"
+            android:src="@drawable/logo_dash" />
     </LinearLayout>
 
     <LinearLayout

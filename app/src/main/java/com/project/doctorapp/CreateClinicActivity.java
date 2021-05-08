@@ -67,5 +67,14 @@ DatabaseReference database;
         });
     }
 
+    public void vieHome(View view){
+        Intent in = new Intent(CreateClinicActivity.this, app1page.class);
+        startActivity(in);
+    }
+
+    public void profile(View view){
+        Intent in = new Intent(CreateClinicActivity.this, DoctorViewProfile.class);
+        startActivity(in);
+    }
 
 }

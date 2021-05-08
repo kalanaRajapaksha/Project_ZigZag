@@ -2,6 +2,7 @@ package com.project.doctorapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,5 +41,10 @@ public class PatientViewProfile extends AppCompatActivity {
         Gender.setText(PatientGender);
 
 
+    }
+
+    public void vieHome(View view){
+        Intent in = new Intent(PatientViewProfile.this, app1page.class);
+        startActivity(in);
     }
 }

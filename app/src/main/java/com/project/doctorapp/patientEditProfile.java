@@ -129,4 +129,9 @@ public class patientEditProfile extends AppCompatActivity {
             return false;
         }
     }
+
+    public void vieHome(View view){
+        Intent in = new Intent(patientEditProfile.this, app1page.class);
+        startActivity(in);
+    }
 }

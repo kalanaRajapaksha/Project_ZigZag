@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pattern_back"
-    tools:context=".CreateDoctorProfileActivity"
+    tools:context=".CreatePatientProfileActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,14 +21,16 @@
             android:id="@+id/imageView2"
             android:layout_width="124dp"
             android:layout_height="102dp"
-            app:srcCompat="@drawable/patient"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:onClick="profile"
+            app:srcCompat="@drawable/patient" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="151dp"
             android:layout_height="109dp"
             android:layout_margin="10dp"
+            android:onClick="vieHome"
             app:srcCompat="@drawable/logo_dash" />
     </LinearLayout>
 
