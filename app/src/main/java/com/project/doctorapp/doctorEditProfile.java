@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +16,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class doctorEditProfile extends AppCompatActivity {
     String _Name,_ContactNo,_Address,_Gender,_Email,_Dob;
-    EditText name,contactNo,address,gender,email,dob;
+    EditText contactNo,address,gender,email,dob;
     Button savebtn;
+    TextView name;
+
 
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -27,6 +30,8 @@ public class doctorEditProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_edit_profile);
+
+
 
         name = findViewById(R.id.docEditName);
         contactNo = findViewById(R.id.docEditPhone);
@@ -53,6 +58,14 @@ public class doctorEditProfile extends AppCompatActivity {
         _Dob = DoctorDOB;
 
 
+        name.setText(DoctorName);
+        contactNo.setText(DoctorContactNo);
+        address.setText(DoctorAddress);
+        gender.setText(DoctorGender);
+        email.setText(DoctorEmail);
+        dob.setText(DoctorDOB);
+
+
 
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,24 +78,25 @@ public class doctorEditProfile extends AppCompatActivity {
 
     private void update() {
 
-        if(isNameChanged() || isContactNumberChanged() || isEmailChanged() || isDateOfBirthChanged() || isAddressChanged() || isGenderChanged()){
+        if(isContactNumberChanged() || isEmailChanged() || isDateOfBirthChanged() || isAddressChanged() || isGenderChanged()){
 
             Toast.makeText(this, "Update Successful!", Toast.LENGTH_SHORT).show();
+            Intent editedintent =  new Intent(doctorEditProfile.this, DoctorViewProfile.class);
+            editedintent.putExtra("_docName",_Name);
+            editedintent.putExtra("_contactNo",_ContactNo);
+            editedintent.putExtra("_email",_Email);
+            editedintent.putExtra("_dob",_Dob);
+            editedintent.putExtra("_address",_Address);
+            editedintent.putExtra("_gender",_Gender);
+            startActivity(editedintent);
         }else{
             Toast.makeText(this, "No data for update", Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    private boolean isNameChanged() {
-        if(!_Name.equals(name.getText().toString().trim())){
-            ref.child(_Name).child("docName").setValue(name.getText().toString().trim());
-            _Name = name.getText().toString();
-            return true;
-        }else{
-            return false;
-        }
-    }
+
+
     private boolean isContactNumberChanged(){
         if(!_ContactNo.equals(contactNo.getText().toString().trim())){
             ref.child(_Name).child("contactNumber").setValue(contactNo.getText().toString().trim());

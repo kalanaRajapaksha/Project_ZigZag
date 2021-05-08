@@ -14,8 +14,6 @@
         android:theme="@style/Theme.DoctorApp">
         <activity android:name=".CreatePatientProfileActivity"></activity>
         <activity android:name=".CreateDoctorProfileActivity"></activity>
-        <activity android:name=".doctorEditProfile"></activity>
-        <activity android:name=".patientEditProfile"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".DoctorViewProfile"></activity>
         <activity android:name=".app1page">
