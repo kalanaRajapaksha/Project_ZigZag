@@ -64,7 +64,7 @@
                 android:textStyle="bold"
                 android:textSize="17sp"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/docEditName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
