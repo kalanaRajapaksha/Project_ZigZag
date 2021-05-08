@@ -142,4 +142,10 @@ public class doctorEditProfile extends AppCompatActivity {
             return false;
         }
     }
+
+    public void vieHome(View view){
+        Intent in = new Intent(doctorEditProfile.this, app1page.class);
+        startActivity(in);
+    }
+
 }

@@ -41,7 +41,10 @@
         <activity android:name=".CreateClinicActivity"></activity>
         <activity android:name=".EditClinicActivity" />
 
-
+        <!-- Charith -->
+        <activity android:name=".EditPatientNote"></activity>
+        <activity android:name=".CreatePaientNote" ></activity>
+        <activity android:name=".PatientNoteView" ></activity>
     </application>
 
 </manifest>

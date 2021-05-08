@@ -1,5 +1,6 @@
 package com.project.doctorapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -61,6 +62,10 @@ public class CreateDoctorProfileActivity extends AppCompatActivity {
                 Toast.makeText(CreateDoctorProfileActivity.this, "Doctor Profile Created!", Toast.LENGTH_LONG).show();
             }
         });
+    }
 
+    public void vieHome(View view){
+        Intent in = new Intent(CreateDoctorProfileActivity.this, app1page.class);
+        startActivity(in);
     }
 }

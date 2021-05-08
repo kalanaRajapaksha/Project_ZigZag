@@ -16,14 +16,19 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="151dp"
-            android:layout_height="109dp"
-            app:srcCompat="@drawable/logo_dash" />
+            android:layout_width="126dp"
+            android:layout_height="93dp"
+            android:layout_marginRight="20dp"
+            android:onClick="profile"
+            app:srcCompat="@drawable/patient_mini" />
 
         <ImageView
-            android:layout_width="157dp"
-            android:layout_height="106dp"
-            app:srcCompat="@drawable/patient_mini" />
+            android:layout_width="151dp"
+            android:layout_height="109dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="vieHome"
+            app:srcCompat="@drawable/logo_dash" />
+
 
     </LinearLayout>
     <LinearLayout
@@ -74,12 +79,16 @@
                 android:id="@+id/setBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
                 android:text="SET" />
 
             <Button
                 android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"
                 android:text="CANCEL" />
         </LinearLayout>
 

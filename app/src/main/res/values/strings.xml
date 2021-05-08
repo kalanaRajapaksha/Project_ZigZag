@@ -84,4 +84,24 @@
     <string name="dtTime"><![CDATA[Date & Time :]]></string>
     <string name="joinBtn1">Join Clinic</string>
 
+    //Charith
+    <string name="view">background</string>
+    <string name="btnCreate">Create Note</string>
+    <string name="myclinic">My Clinic</string>
+    <string name="view2">View Note</string>
+    <string name="btnCreateNow">Create</string>
+    <string name="viewCreateNote">Create Note</string>
+    <string name="txtName1">Note Name :</string>
+    <string name="txtArea">Description :</string>
+    <string name="btnsave">Save</string>
+    <string name="nEdit">Edit Note</string>
+    <string name="btnSaveChange">Save</string>
+    <string name="txtSearch">Search</string>
+    <string name="btnCreateClinic">Create Clinic</string>
+    <string name="btnPjoin">Join Clinic</string>
+    <string name="btnShowData">View Notes</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnview">Clinic</string>
+    <string name="btnView">Notes</string>
+
 </resources>

@@ -62,4 +62,14 @@ public class EditClinicActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void vieHome(View view){
+        Intent in = new Intent(EditClinicActivity.this, app1page.class);
+        startActivity(in);
+    }
+
+    public void profile(View view){
+        Intent in = new Intent(EditClinicActivity.this, DoctorViewProfile.class);
+        startActivity(in);
+    }
 }

@@ -64,4 +64,9 @@ public class DoctorViewProfile extends AppCompatActivity {
             }
         });
     }
+
+    public void vieHome(View view){
+        Intent in = new Intent(DoctorViewProfile.this, app1page.class);
+        startActivity(in);
+    }
 }

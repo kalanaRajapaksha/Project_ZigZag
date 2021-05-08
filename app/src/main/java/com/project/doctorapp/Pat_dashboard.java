@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +36,7 @@ public class Pat_dashboard extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         clinic1 = new  ArrayList<com.project.doctorapp.Clinic>();
+
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("Clinic Data");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
@@ -76,5 +79,27 @@ public class Pat_dashboard extends AppCompatActivity {
         }
     };
 
+    public void noteView(View view){
+        Toast.makeText(getApplicationContext(), "Showing Notes...", Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(Pat_dashboard.this , PatientNoteView.class);
+        startActivity(i);
+    }
 
+    public void clinicView(View view){
+        Toast.makeText(getApplicationContext(), "Showing Clinic...", Toast.LENGTH_SHORT).show();
+    }
+
+    public void vieHome(View view){
+        Intent in = new Intent(Pat_dashboard.this, app1page.class);
+        startActivity(in);
+    }
+    public void profile(View view){
+        Intent in = new Intent(Pat_dashboard.this, PatientViewProfile.class);
+        startActivity(in);
+    }
+
+    public void alerm(View view){
+        Intent in = new Intent(Pat_dashboard.this, reminderPatient.class);
+        startActivity(in);
+    }
 }
