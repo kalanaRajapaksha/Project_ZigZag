@@ -86,7 +86,7 @@ public class signDoctor extends AppCompatActivity {
                         String _address = snapshot.child(_username).child("address").getValue(String.class);
                         String _gender = snapshot.child(_username).child("gender").getValue(String.class);
 
-                        Intent loginIntent = new Intent(signDoctor.this,DoctorViewProfile.class);
+                        Intent loginIntent = new Intent(signDoctor.this,Doc_dashboard.class);
                         loginIntent.putExtra("_docName",_docName);
                         loginIntent.putExtra("_contactNo",_contactNo);
                         loginIntent.putExtra("_email",_email);

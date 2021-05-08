@@ -28,6 +28,22 @@
         <activity android:name=".signDoctor"></activity>
         <activity android:name=".PatientViewProfile"></activity>
         <activity android:name=".signPatient"></activity>
+
+        <!--     kala      -->
+        <activity android:name=".Pat_dashboard">
+
+
+        </activity>
+        <activity android:name=".Doc_dashboard">
+
+        </activity>
+        <activity android:name=".PatientViewActivity" />
+        <activity android:name=".DoctorViewActivity" />
+        <activity android:name=".JoinClinicActivity" />
+        <activity android:name=".CreateClinicActivity"></activity>
+        <activity android:name=".EditClinicActivity" />
+
+
     </application>
 
 </manifest>

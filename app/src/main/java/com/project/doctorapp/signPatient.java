@@ -83,7 +83,7 @@ public class signPatient extends AppCompatActivity {
                         String _patientaddress = snapshot.child(_patientusername).child("address").getValue(String.class);
                         String _patientgender = snapshot.child(_patientusername).child("gender").getValue(String.class);
 
-                        Intent loginPatientIntent = new Intent(signPatient.this,PatientViewProfile.class);
+                        Intent loginPatientIntent = new Intent(signPatient.this,Pat_dashboard.class);
                         loginPatientIntent.putExtra("_patientName",_patientName);
                         loginPatientIntent.putExtra("_patientcontactNo",_patientcontactNo);
                         loginPatientIntent.putExtra("_patientemail",_patientemail);
