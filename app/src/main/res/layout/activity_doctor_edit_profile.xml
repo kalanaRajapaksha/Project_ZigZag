@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/_st_back"
+    tools:context=".doctorEditProfile"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:src="@drawable/doca"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="124dp"
+            android:layout_marginLeft="5dp"
+            android:padding="3dp"
+            app:srcCompat="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_as_doc1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_view"
+            android:padding="10dp"
+            android:text="Edit Doctor Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Name       "
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+
+            <EditText
+                android:id="@+id/docEditName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/edit_text"
+                android:textAlignment="textEnd"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Number "
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+            <EditText
+
+                android:id="@+id/docEditPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email                     "
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+            <EditText
+
+                android:id="@+id/docEditEmail"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/edit_text"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth        "
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+            <EditText
+
+                android:id="@+id/docEditDOB"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/edit_text"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address                "
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+            <EditText
+
+                android:id="@+id/docEditAddress"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/edit_text"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender                  "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textSize="17sp"/>
+            <EditText
+
+                android:id="@+id/docEditGender"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:background="@drawable/edit_text"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/docEditSave"
+            android:layout_width="167dp"
+            android:layout_height="61dp"
+            android:background="@drawable/button_dr"
+            android:text="@string/saveBtn"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/purple_500" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

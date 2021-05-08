@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DoctorApp</string>
+    <string name="doctorView">Doctor Profile</string>
+    <string name="editBtn">EDIT</string>
+    <string name="deleteBtn">DELETE</string>
+    <string name="remindBtn">REMINDERS</string>
+    <string name="docNameView">Doctor Name</string>
+    <string name="docGenderView">Gender</string>
+    <string name="docPhoneView">Contact No</string>
+    <string name="docEmailView">Email</string>
+    <string name="docBirthView">Date of Birth</string>
+    <string name="docAddressView">Address</string>
+    <string name="docPassView">Password</string>
+    <string name="patNameView">Patient Name</string>
+    <string name="patGenderView">Gender</string>
+    <string name="patPhoneView">Contact No</string>
+    <string name="patEmailView">Email</string>
+    <string name="patBirthView">Date of Birth</string>
+    <string name="patAddressView">Address</string>
+    <string name="patPassView">Password</string>
+    <string name="saveBtn">Save Changes</string>
+    <string name="doctorView1">Edit Doctor Profile</string>
+    <string name="patientView">Patient Profile</string>
+    <string name="patientView1">Edit  Patient Profile</string>
+    <string name="editPatientName">Patient Name</string>
+    <string name="createProfile">Create Profile</string>
+    <string name="CreateBtn">Create</string>
+    <string name="remText">REMINDER</string>
+    <string name="viewPatient">Password</string>
+    <string name="addressPatient">Address</string>
+</resources>

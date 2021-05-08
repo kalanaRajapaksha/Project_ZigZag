@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_as_doc"
+    tools:context=".signPatient"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/sign_as_doc">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            app:srcCompat="@drawable/patient" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient"
+            android:textColor="#090808"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/sign_as_patient">
+
+
+    <EditText
+        android:id="@+id/usernamePatientLogin"
+        android:layout_width="280dp"
+        android:layout_height="38dp"
+        android:layout_margin="14dp"
+        android:autofillHints=""
+        android:background="@drawable/box"
+        android:drawableStart="@drawable/ic_baseline_how_to_reg_24"
+        android:drawablePadding="5dp"
+        android:elevation="10dp"
+        android:ems="10"
+        android:hint="UserName"/>
+
+
+
+    <EditText
+        android:id="@+id/passwordPatientLogin"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/box"
+        android:drawableStart="@drawable/eye"
+        android:drawablePadding="5dp"
+        android:elevation="6dp"
+        android:ems="10"
+        android:hint="Password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingStart="8dp"
+        android:paddingLeft="15sp" />
+
+    <ImageView
+        android:id="@+id/signinbtnpatientlogin"
+        android:layout_width="288dp"
+        android:layout_height="63dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.728"
+        app:srcCompat="@drawable/patient_sign_button" />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't Have Acoount?"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/signUpPatient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are Your a Doctor?"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/doctorclickherepatientlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click Here"
+            android:padding="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

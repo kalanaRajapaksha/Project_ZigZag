@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_back"
+    tools:context=".CreateDoctorProfileActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="124dp"
+            android:layout_height="102dp"
+            app:srcCompat="@drawable/patient"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="151dp"
+            android:layout_height="109dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/logo_dash" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientround"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/textViewProfileTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/text_view"
+            android:text="@string/patientView"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/patientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patNameView"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+        <EditText
+
+            android:id="@+id/patientAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patAddressView"
+            android:padding="10dp"
+            android:inputType="text"
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <EditText
+
+            android:id="@+id/patientNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patPhoneView"
+            android:padding="10dp"
+            android:inputType="phone"
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            />
+
+        <EditText
+
+            android:id="@+id/patientDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patBirthView"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:inputType="date"
+            android:layout_margin="10dp"
+            android:textAlignment="center"/>
+
+        <EditText
+
+            android:id="@+id/patientEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patEmailView"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:layout_margin="10dp"
+            android:textAlignment="center"/>
+
+        <EditText
+
+            android:id="@+id/patientPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patPassView"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            android:textAlignment="center"/>
+
+        <EditText
+
+            android:id="@+id/patientGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/patGenderView"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:textAlignment="center"/>
+
+
+
+
+        <Button
+            android:id="@+id/patientProfileCreate"
+            android:layout_width="181dp"
+            android:layout_height="44dp"
+            android:background="@drawable/button_dr"
+            android:text="@string/createProfile"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/purple_500" />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

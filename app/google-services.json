@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "841122283831",
+    "firebase_url": "https://doctorapp-1b0c8-default-rtdb.firebaseio.com",
+    "project_id": "doctorapp-1b0c8",
+    "storage_bucket": "doctorapp-1b0c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841122283831:android:41caa9e5c90c481ba8dab2",
+        "android_client_info": {
+          "package_name": "com.example.doctorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841122283831-c9v64ku7eubqfop3liv4dmm4oqkt0q6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeMBs-qjd5Ul19i_19UXan-2c2WB58j3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841122283831-c9v64ku7eubqfop3liv4dmm4oqkt0q6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841122283831:android:93e16636e4e30ec9a8dab2",
+        "android_client_info": {
+          "package_name": "com.project.doctorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841122283831-c9v64ku7eubqfop3liv4dmm4oqkt0q6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeMBs-qjd5Ul19i_19UXan-2c2WB58j3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841122283831-c9v64ku7eubqfop3liv4dmm4oqkt0q6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

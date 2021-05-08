@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="344dp"
+        android:layout_height="379dp"
+        android:background="@drawable/box"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798"
+        tools:targetApi="lollipop">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="280dp"
+            android:layout_height="38dp"
+            android:layout_margin="14dp"
+            android:autofillHints=""
+            android:background="@drawable/textbox"
+            android:drawableStart="@drawable/ic_baseline_how_to_reg_24"
+            android:drawablePadding="5dp"
+            android:elevation="10dp"
+            android:ems="10"
+
+            android:inputType="textPersonName"
+            android:paddingStart="8dp"
+            android:paddingLeft="15sp"
+            android:paddingEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.205" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="280dp"
+            android:layout_height="44dp"
+            android:layout_margin="14dp"
+            android:autofillHints=""
+            android:background="@drawable/textbox"
+            android:drawableStart="@drawable/eye"
+            android:drawablePadding="5dp"
+            android:elevation="6dp"
+            android:ems="10"
+
+            android:inputType="textPassword"
+            android:paddingStart="8dp"
+            android:paddingLeft="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.447" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="142dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="148dp"
+            android:elevation="8dp"
+            app:backgroundTint="#009688"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="33dp"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.197" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
