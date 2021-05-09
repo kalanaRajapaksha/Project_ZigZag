@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -76,6 +77,10 @@ Button create,refresh;
 
             }
         };
+
+    public void noteView(View view){
+        Toast.makeText(getApplicationContext(), "Showing Notices...", Toast.LENGTH_SHORT).show();
+    }
 
     public void vieHome(View view){
         Intent in = new Intent(Doc_dashboard.this, app1page.class);

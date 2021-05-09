@@ -104,4 +104,10 @@
     <string name="btnview">Clinic</string>
     <string name="btnView">Notes</string>
 
+    //Ravindu
+    <string name="clinicview">Clinic</string>
+    <string name="noticeview">Notices</string>
+    <string name="textNoticename">Create Notices</string>
+    <string name="txtNoticesView">Notices View</string>
+    <string name="txtEditNotice">Edit Notice</string>
 </resources>

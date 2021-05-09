@@ -45,6 +45,15 @@
         <activity android:name=".EditPatientNote"></activity>
         <activity android:name=".CreatePaientNote" ></activity>
         <activity android:name=".PatientNoteView" ></activity>
+
+        <!--Ravindu-->
+        <activity android:name=".EditDoctorNotice"></activity>
+        <activity android:name=".CreateDoctorNotice">
+        </activity>
+        <activity android:name=".DoctorNoticesView">
+        </activity>
+
     </application>
+
 
 </manifest>
