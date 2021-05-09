@@ -60,8 +60,6 @@ public class signDoctor extends AppCompatActivity {
                 startActivity(signupintent);
             }
         });
-
-
     }
     public void LetTheDoctorLoggedIn(){
         String _username = usernameenter.getText().toString().trim();

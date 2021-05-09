@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,25 +20,25 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class PatientViewActivity extends AppCompatActivity {
+public class DoctorNoticesPatientView extends AppCompatActivity {
+
     TextView cName;
     String clinicName;
     private RecyclerView recyclerView;
-    private ArrayList<Patient> patient1;
-    private com.project.doctorapp.P_PatientAdapter p_patientAdapter;
+    private ArrayList<DoctorNote> pNotices;
+    private PatientNoticesAdapter myAdapter;
     DatabaseReference dbRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patient_view);
-        cName = findViewById(R.id.clinicNameTxt2);
-        Intent i = getIntent();
-        clinicName = i.getStringExtra("clinicName");
+        setContentView(R.layout.activity_doctor_notices_patient_view);
+
         recyclerView = findViewById(R.id.recycler8);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        patient1 = new  ArrayList<Patient>();
-        cName.setText(clinicName);
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Patient");
+        pNotices = new  ArrayList<DoctorNote>();
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("DoctorNotices");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
     }
 
@@ -45,11 +46,11 @@ public class PatientViewActivity extends AppCompatActivity {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
             for (DataSnapshot snapshot1: snapshot.getChildren()){
-                Patient uData = snapshot1.getValue(Patient.class);
-                patient1.add(uData);
+                DoctorNote uData = snapshot1.getValue(DoctorNote.class);
+                pNotices.add(uData);
             }
-            p_patientAdapter = new com.project.doctorapp.P_PatientAdapter(com.project.doctorapp.PatientViewActivity.this,patient1);
-            recyclerView.setAdapter(p_patientAdapter);
+            myAdapter = new PatientNoticesAdapter(DoctorNoticesPatientView.this,pNotices);
+            recyclerView.setAdapter(myAdapter);
         }
 
         @Override
@@ -58,19 +59,19 @@ public class PatientViewActivity extends AppCompatActivity {
         }
     };
 
+    public void viewPatient(View view){
+        Toast.makeText(this, "Showing Patients...", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(DoctorNoticesPatientView.this, PatientViewActivity.class);
+        startActivity(in);
+    }
+
     public void vieHome(View view){
-        Intent in = new Intent(PatientViewActivity.this, app1page.class);
+        Intent in = new Intent(DoctorNoticesPatientView.this, app1page.class);
         startActivity(in);
     }
 
     public void profile(View view){
-        Intent in = new Intent(PatientViewActivity.this, PatientViewProfile.class);
+        Intent in = new Intent(DoctorNoticesPatientView.this, PatientViewProfile.class);
         startActivity(in);
-    }
-
-    public void viewNotices(View view){
-        Intent in = new Intent(PatientViewActivity.this, DoctorNoticesPatientView.class);
-        startActivity(in);
-        Toast.makeText(this, "Showing Notices..", Toast.LENGTH_SHORT).show();
     }
 }

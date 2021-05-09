@@ -52,7 +52,7 @@
     <string name="dtt">Date and Time</string>
     <string name="searchBar">Search</string>
     <string name="textClinicName">Clinic 01</string>
-<!--    <string name="editBtn">EDIT</string>-->
+    <!--    <string name="editBtn">EDIT</string>-->
     <string name="delete"></string>
     <string name="patView1">PATIENT 01</string>
     <string name="patientview1">PATIENT 01</string>
@@ -103,5 +103,12 @@
     <string name="btnUpdate">Update</string>
     <string name="btnview">Clinic</string>
     <string name="btnView">Notes</string>
+
+    //Ravindu
+    <string name="clinicview">Patient</string>
+    <string name="noticeview">Notices</string>
+    <string name="textNoticename">Create Notices</string>
+    <string name="txtNoticesView">Notices View</string>
+    <string name="txtEditNotice">Edit Notice</string>
 
 </resources>

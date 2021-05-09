@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditPatientNote">
-
-
+    tools:context=".EditDoctorNote">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,14 +32,13 @@
             android:layout_width="93dp"
             android:layout_height="101dp"
             android:layout_marginStart="164dp"
-            android:onClick="vieHome"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.122"
             app:layout_constraintStart_toEndOf="@+id/btnDelete"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.078"
-            app:srcCompat="@drawable/pnote_logo"
+            app:srcCompat="@drawable/logo"
             tools:ignore="VectorDrawableCompat" />
 
         <ImageButton
@@ -54,7 +51,7 @@
             app:layout_constraintHorizontal_bias="0.108"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/pnote_ic_menu"
+            app:srcCompat="@drawable/dnote_ic_menu"
             tools:ignore="VectorDrawableCompat" />
 
         <ImageView
@@ -62,14 +59,13 @@
             android:layout_width="68dp"
             android:layout_height="77dp"
             android:layout_marginTop="16dp"
-            android:onClick="profile"
             app:layout_constraintBottom_toTopOf="@+id/imageButton7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.65"
-            app:srcCompat="@drawable/patient" />
+            app:srcCompat="@drawable/doc_mini" />
 
 
         <TextView
@@ -77,7 +73,7 @@
             android:layout_width="396dp"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
-            android:background="#56C3B9"
+            android:background="#9572E8"
             android:freezesText="false"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
@@ -88,23 +84,24 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.304"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-            app:layout_constraintVertical_bias="0.028" />
+            app:layout_constraintVertical_bias="0.03" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="432dp"
+            android:layout_width="395dp"
+            android:layout_height="466dp"
             android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtView5"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/bottom_pattern" />
+            app:srcCompat="@drawable/bottom_patternb"
+            tools:ignore="UnknownId" />
 
         <LinearLayout
             android:layout_width="365dp"
@@ -124,14 +121,14 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="Note Name "
-                android:textSize="18dp"
-                android:textColor="#636363" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/pnote_textbox"
+                android:background="@drawable/dnote_textboxwhite"
                 android:paddingTop="5dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -146,15 +143,15 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="15dp"
-                android:textSize="18dp"
                 android:text="Description"
-                android:textColor="#636363" />
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/etNote"
                 android:layout_width="match_parent"
                 android:layout_height="121dp"
-                android:background="@drawable/pnote_textbox"
+                android:background="@drawable/dnote_textboxwhite"
                 android:paddingTop="8dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -175,9 +172,9 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:typeface="normal"
-            app:backgroundTint="#05C1B0"
+            app:backgroundTint="#FA2BDCCD"
             app:cornerRadius="20dp"
-            app:icon="@drawable/pnote_edit_note"
+            app:icon="@drawable/dnote_edit_note"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.922"
@@ -186,5 +183,7 @@
             app:layout_constraintVertical_bias="0.824" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

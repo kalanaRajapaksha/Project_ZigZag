@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -91,6 +92,16 @@ public class DoctorViewActivity extends AppCompatActivity {
 
     public void profile(View view){
         Intent in = new Intent(DoctorViewActivity.this, DoctorViewProfile.class);
+        startActivity(in);
+    }
+
+    public void viewPatient(View view){
+        Toast.makeText(this, "Showing Patient...", Toast.LENGTH_SHORT).show();
+    }
+
+    public void viewNotice(View view){
+        Toast.makeText(this, "Showing Notice...", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(DoctorViewActivity.this, DoctorNoticesView.class);
         startActivity(in);
     }
 }

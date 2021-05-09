@@ -12,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DoctorApp">
+        <!--  Dilshani -->
+        <activity android:name=".patientEditProfile"/>
+        <activity android:name=".reminderPatient"/>
+        <activity android:name=".DoctorNoticesPatientView"/>
         <activity android:name=".CreatePatientProfileActivity"></activity>
         <activity android:name=".CreateDoctorProfileActivity"></activity>
         <activity android:name=".MainActivity"></activity>
@@ -28,23 +32,25 @@
         <activity android:name=".signPatient"></activity>
 
         <!--     kala      -->
-        <activity android:name=".Pat_dashboard">
-
-
-        </activity>
-        <activity android:name=".Doc_dashboard">
-
-        </activity>
+        <activity android:name=".Pat_dashboard"></activity>
+        <activity android:name=".Doc_dashboard"></activity>
         <activity android:name=".PatientViewActivity" />
         <activity android:name=".DoctorViewActivity" />
         <activity android:name=".JoinClinicActivity" />
-        <activity android:name=".CreateClinicActivity"></activity>
+        <activity android:name=".CreateClinicActivity"/>
         <activity android:name=".EditClinicActivity" />
 
         <!-- Charith -->
         <activity android:name=".EditPatientNote"></activity>
         <activity android:name=".CreatePaientNote" ></activity>
         <activity android:name=".PatientNoteView" ></activity>
-    </application>
+        <activity android:name=".DoctorNoteView"></activity>
+        <activity android:name=".EditDoctorNote"></activity>
+        <activity android:name=".CreateDoctorNote"></activity>
 
+        <!--Ravindu-->
+        <activity android:name=".EditDoctorNotice"></activity>
+        <activity android:name=".CreateDoctorNotice"></activity>
+        <activity android:name=".DoctorNoticesView"></activity>
+    </application>
 </manifest>

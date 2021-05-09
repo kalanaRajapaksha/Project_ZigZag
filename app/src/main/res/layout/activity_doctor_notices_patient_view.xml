@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pattern_back"
-    tools:context=".PatientViewActivity">
+    tools:context=".DoctorNoticesPatientView">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -69,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/leftconer"
+                android:onClick="viewPatient"
                 android:text="@string/patientBtn"
                 android:textColor="#000000"
                 app:backgroundTint="#15F623" />
@@ -79,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/rightcorner"
-                android:onClick="viewNotices"
                 android:text="@string/noticesBtn"
                 android:textColor="#000000"
                 app:backgroundTint="#D1F3D3" />
@@ -114,20 +115,23 @@
         app:layout_constraintVertical_bias="0.119"
         app:srcCompat="@drawable/menu" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler8"
-        android:layout_width="377dp"
-        android:layout_height="445dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler8"
+            android:layout_width="377dp"
+            android:layout_height="445dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/clinicNameTxt2"
@@ -168,5 +172,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".8" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -87,4 +88,14 @@ Button create,refresh;
         startActivity(in);
     }
 
+    public void noteView(View view){
+        Toast.makeText(this, "Showing Notes...", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(Doc_dashboard.this, DoctorNoteView.class);
+        startActivity(in);
     }
+
+    public void clinicView(View view){
+        Toast.makeText(this, "Showing Clinic...", Toast.LENGTH_SHORT).show();
+    }
+
+}
