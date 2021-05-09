@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/dnote_left_round_btn"
-            android:onClick="clinicview"
+            android:onClick="viewPatient"
             android:text="@string/clinicview"
             android:textAlignment="center"
             android:textColor="#FFFFFF"

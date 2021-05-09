@@ -83,4 +83,9 @@ public class DoctorNoticesView extends AppCompatActivity {
     public void noteview(View view){
         Toast.makeText(getApplicationContext(),"Showing Notice...", Toast.LENGTH_SHORT).show();
     }
+
+    public void viewPatient(View view){
+        Intent i = new Intent(DoctorNoticesView.this , DoctorViewActivity.class);
+        startActivity(i);
+    }
 }
