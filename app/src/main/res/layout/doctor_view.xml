@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/rightcorner"
-                android:text="@string/notesBtn"
+                android:text="@string/noticesBtn"
                 android:textColor="#000000"
                 app:backgroundTint="#D1F3D3" />
         </LinearLayout>

@@ -84,6 +84,11 @@ public class DoctorViewActivity extends AppCompatActivity {
         }
     };
 
+    public void viewNoties(View view){
+        Intent i = new Intent(DoctorViewActivity.this , DoctorNoticesView.class);
+        startActivity(i);
+    }
+
     public void vieHome(View view){
         Intent in = new Intent(DoctorViewActivity.this, app1page.class);
         startActivity(in);
