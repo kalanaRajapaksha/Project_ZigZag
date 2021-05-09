@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 public class Doc_dashboard extends AppCompatActivity {
 
 Button create,refresh;
+ImageView btn;
         private RecyclerView recyclerView;
         private ArrayList<Clinic> clinic1;
         private  ClinicAdapter clinicAdapter;
@@ -33,12 +35,23 @@ Button create,refresh;
              refresh=findViewById(R.id.clinicBtn);
             create = findViewById(R.id.joinBtn1);
             recyclerView = findViewById(R.id.recycler);
+            btn = findViewById(R.id.profileviewdoc);
 
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             clinic1 = new  ArrayList<Clinic>();
 
             dbRef = FirebaseDatabase.getInstance().getReference().child("Clinic Data");
             dbRef.addListenerForSingleValueEvent(valueEventListener);
+
+        Intent profileIntent = getIntent();
+
+        String DoctorName = profileIntent.getStringExtra("_docName");
+        String DoctorContactNo = profileIntent.getStringExtra("_contactNo");
+        String DoctorEmail = profileIntent.getStringExtra("_email");
+        String DoctorDOB = profileIntent.getStringExtra("_dob");
+        String DoctorAddress = profileIntent.getStringExtra("_address");
+        String DoctorGender = profileIntent.getStringExtra("_gender");
+
 
             create.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -55,6 +68,20 @@ Button create,refresh;
                     overridePendingTransition(0,0);
                     startActivity(i);
                     overridePendingTransition(0,0);
+                }
+            });
+
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(Doc_dashboard.this, DoctorViewProfile.class);
+                    in.putExtra("_docName",DoctorName);
+                    in.putExtra("_contactNo",DoctorContactNo);
+                    in.putExtra("_email",DoctorEmail);
+                    in.putExtra("_dob",DoctorDOB);
+                    in.putExtra("_address",DoctorAddress);
+                    in.putExtra("_gender",DoctorGender);
+                    startActivity(in);
                 }
             });
 
@@ -88,8 +115,7 @@ Button create,refresh;
     }
 
     public void profile(View view){
-        Intent in = new Intent(Doc_dashboard.this, DoctorViewProfile.class);
-        startActivity(in);
+
     }
 
     }
