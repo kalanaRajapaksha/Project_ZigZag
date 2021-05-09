@@ -24,7 +24,9 @@ public class DoctorNoticesView extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;
+
     private ArrayList<DoctorNotices> notes;
+
     SwipeRefreshLayout swiperefreshlayout;
     private  DoctorAdapter myAdapter;
     DatabaseReference dbRef;
@@ -37,7 +39,9 @@ public class DoctorNoticesView extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         notes = new  ArrayList<DoctorNotices>();
+
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("DoctorNotices");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
@@ -56,7 +60,9 @@ public class DoctorNoticesView extends AppCompatActivity {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
             for (DataSnapshot snapshot1: snapshot.getChildren()){
+
                 DoctorNotices dData = snapshot1.getValue(DoctorNotices.class);
+
                 notes.add(dData);
             }
             myAdapter= new DoctorAdapter(DoctorNoticesView.this,notes);
@@ -85,6 +91,7 @@ public class DoctorNoticesView extends AppCompatActivity {
     }
 
     public void viewPatient(View view){
+
         Toast.makeText(getApplicationContext(),"Showing Patient...", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(DoctorNoticesView.this , DoctorViewActivity.class);
         startActivity(i);

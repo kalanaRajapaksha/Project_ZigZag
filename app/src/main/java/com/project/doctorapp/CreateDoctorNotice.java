@@ -21,7 +21,9 @@ import java.util.Date;
 public class CreateDoctorNotice extends AppCompatActivity {
 
     EditText etName, etNote;
-    Button btnAddData;
+
+    Button btnAddData,btnBack;
+
     DatabaseReference database;
 
     @Override
@@ -32,8 +34,12 @@ public class CreateDoctorNotice extends AppCompatActivity {
         Date currentTime = Calendar.getInstance().getTime();
         String date = DateFormat.getDateInstance().format(currentTime);
 
+
+
         etName = findViewById(R.id.etName);
         etNote = findViewById(R.id.etNote);
+
+
 
         btnAddData = findViewById(R.id.btnAddData);
 
@@ -55,13 +61,18 @@ public class CreateDoctorNotice extends AppCompatActivity {
                     Toast.makeText(CreateDoctorNotice.this, "Description field is empty!", Toast.LENGTH_SHORT).show();
                 }
                 else{
+
                     DoctorNotices notes = new DoctorNotices(id,name, note, date);
+
+
                     database.child(id).setValue(notes);
 
                     etName.setText("");
                     etNote.setText("");
 
                     Toast.makeText(getApplicationContext(), "Notice Inserted ! "+notes.getName(), Toast.LENGTH_SHORT).show();
+
+
                     Intent in = new Intent(CreateDoctorNotice.this, DoctorNoticesView.class);
                     startActivity(in);
                 }

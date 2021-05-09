@@ -160,7 +160,11 @@
         </LinearLayout>
 
         <Button
+
             android:id="@+id/btnUpdateNote"
+
+            
+
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:fontFamily="sans-serif"

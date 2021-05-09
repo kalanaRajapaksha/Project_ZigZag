@@ -29,6 +29,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHold
     SwipeRefreshLayout swiperefreshlayout;
 
     public DoctorAdapter(Context context,ArrayList<DoctorNotices> notes){
+
         this.context = context;
         this.notes = notes;
     }
@@ -42,7 +43,9 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
+
         DoctorNotices notes = this.notes.get(position);
+
         myViewHolder.name.setText(notes.getName());
         myViewHolder.note.setText(notes.getNote());
         myViewHolder.date.setText(notes.getDate());

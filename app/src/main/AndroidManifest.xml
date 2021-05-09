@@ -44,6 +44,7 @@
         <activity android:name=".EditPatientNote"></activity>
         <activity android:name=".CreatePaientNote" ></activity>
         <activity android:name=".PatientNoteView" ></activity>
+
         <activity android:name=".DoctorNoteView"></activity>
         <activity android:name=".EditDoctorNote"></activity>
         <activity android:name=".CreateDoctorNote"></activity>

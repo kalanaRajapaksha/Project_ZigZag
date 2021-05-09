@@ -34,6 +34,7 @@ public class EditDoctorNotice extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etDes =  findViewById(R.id.etNote);
+
         upBtn = findViewById(R.id.btnUpdateNote);
 
         Intent intent = getIntent();
@@ -52,6 +53,7 @@ public class EditDoctorNotice extends AppCompatActivity {
                 String uName,uDes;
                 uName = etName.getText().toString();
                 uDes = etDes.getText().toString();
+
                 DoctorNotices note = new DoctorNotices(userId,uName,uDes, date);
                 databaseReference.setValue(note);
 
