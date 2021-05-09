@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/pattern_back"
     tools:context=".PatientViewActivity">
 
@@ -18,10 +17,9 @@
 
         <FrameLayout
             android:id="@+id/back"
-            android:layout_width="391dp"
+            android:layout_width="393dp"
             android:layout_height="517dp"
             android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="235dp"
             android:elevation="8dp"
             android:foreground="@drawable/sign_as_patient"
@@ -54,16 +52,16 @@
             android:layout_width="226dp"
             android:layout_height="47dp"
             android:layout_marginStart="73dp"
-            android:layout_marginLeft="73dp"
             android:layout_marginTop="178dp"
             android:layout_marginEnd="94dp"
-            android:layout_marginRight="94dp"
             android:layout_marginBottom="18dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/back"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <Button
                 android:id="@+id/clinicBtn"
@@ -81,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/rightcorner"
+                android:onClick="viewNotices"
                 android:text="@string/noticesBtn"
                 android:textColor="#000000"
                 app:backgroundTint="#D1F3D3" />

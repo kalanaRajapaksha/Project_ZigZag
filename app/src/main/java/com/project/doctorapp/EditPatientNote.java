@@ -35,7 +35,7 @@ public class EditPatientNote extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etDes =  findViewById(R.id.etNote);
-        upBtn = findViewById(R.id.btnUpdate);
+        upBtn = findViewById(R.id.btnUpdateNote);
 
         Intent intent = getIntent();
         userId = intent.getStringExtra("id");

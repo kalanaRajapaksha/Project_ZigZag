@@ -118,4 +118,14 @@ ImageView btn;
 
     }
 
+    public void noteView(View view){
+        Toast.makeText(this, "Showing Notes...", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(Doc_dashboard.this, DoctorNoteView.class);
+        startActivity(in);
     }
+
+    public void clinicView(View view){
+        Toast.makeText(this, "Showing Clinic...", Toast.LENGTH_SHORT).show();
+    }
+
+}

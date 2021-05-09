@@ -1,6 +1,5 @@
 package com.project.doctorapp;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,12 +16,12 @@ import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class EditDoctorNotice extends AppCompatActivity {
+public class EditDoctorNote extends AppCompatActivity {
 
     EditText etName,etDes;
     Button upBtn;
     String userId,name,des;
-    private  DoctorAdapter myAdapter;
+    private  DoctorNoteAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,6 @@ public class EditDoctorNotice extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etDes =  findViewById(R.id.etNote);
-
         upBtn = findViewById(R.id.btnUpdateNote);
 
         Intent intent = getIntent();
@@ -49,20 +47,18 @@ public class EditDoctorNotice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DoctorNotices").child(userId);
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DoctorNote").child(userId);
                 String uName,uDes;
                 uName = etName.getText().toString();
                 uDes = etDes.getText().toString();
-
-                DoctorNotices note = new DoctorNotices(userId,uName,uDes, date);
+                DoctorNote note = new DoctorNote(userId,uName,uDes, date);
                 databaseReference.setValue(note);
 
-                Toast.makeText(EditDoctorNotice.this,"Noted Updated "+name,Toast.LENGTH_SHORT).show();
-                Intent in = new Intent(EditDoctorNotice.this, DoctorNoticesView.class);
+                Toast.makeText(EditDoctorNote.this,"Noted Updated "+name,Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(EditDoctorNote.this, DoctorNoteView.class);
                 startActivity(in);
             }
         });
-
     }
 
 }

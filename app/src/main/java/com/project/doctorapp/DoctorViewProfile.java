@@ -46,7 +46,6 @@ public class DoctorViewProfile extends AppCompatActivity {
         Gender.setText(DoctorGender);
 
 
-
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

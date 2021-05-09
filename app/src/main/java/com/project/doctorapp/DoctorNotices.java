@@ -1,16 +1,17 @@
 package com.project.doctorapp;
 
-public class DoctorNote {
+public class DoctorNotices {
+
 
     private String id;
     private String name;
     private String note;
     private String date;
 
-    public DoctorNote() {
+    public DoctorNotices() {
     }
 
-    public DoctorNote(String id, String name, String note, String date) {
+    public DoctorNotices(String id, String name, String note, String date) {
         this.id = id;
         this.name = name;
         this.note = note;
@@ -48,5 +49,4 @@ public class DoctorNote {
     public void setDate(String date) {
         this.date = date;
     }
-
 }

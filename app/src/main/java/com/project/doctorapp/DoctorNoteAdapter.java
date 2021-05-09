@@ -1,6 +1,5 @@
 package com.project.doctorapp;
 
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -21,15 +20,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHolder> {
+
+public class DoctorNoteAdapter extends RecyclerView.Adapter<DoctorNoteAdapter.MyViewHolder> {
 
     private Context context;
-    private ArrayList<DoctorNotices> notes;
-    DoctorAdapter myAdapter;
-    SwipeRefreshLayout swiperefreshlayout;
+    private ArrayList<DoctorNote> notes;
+    DoctorNoteAdapter myAdapter;
 
-    public DoctorAdapter(Context context,ArrayList<DoctorNotices> notes){
-
+    public DoctorNoteAdapter(Context context,ArrayList<DoctorNote> notes){
         this.context = context;
         this.notes = notes;
     }
@@ -43,9 +41,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
-
-        DoctorNotices notes = this.notes.get(position);
-
+        DoctorNote notes = this.notes.get(position);
         myViewHolder.name.setText(notes.getName());
         myViewHolder.note.setText(notes.getNote());
         myViewHolder.date.setText(notes.getDate());
@@ -60,10 +56,10 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyViewHold
                 alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DoctorNotices").child(notes.getId());
+                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DoctorNote").child(notes.getId());
                         databaseReference.removeValue();
                         Toast.makeText(context,"Note Deleted! "+notes.getName(),Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(v.getContext(), DoctorNoticesView.class);
+                        Intent i = new Intent(v.getContext(), DoctorNoteView.class);
                         v.getContext().startActivity(i);
                     }
                 });

@@ -18,10 +18,9 @@
 
         <FrameLayout
             android:id="@+id/back"
-            android:layout_width="391dp"
-            android:layout_height="517dp"
+            android:layout_width="395dp"
+            android:layout_height="519dp"
             android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginTop="235dp"
             android:elevation="8dp"
             android:foreground="@drawable/b_back"
@@ -172,4 +171,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".8" />
 
+    <LinearLayout
+        android:layout_width="107dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recycler"
+        tools:ignore="UnknownId">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="alerm"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxImageSize="35dp"
+            app:srcCompat="@drawable/alarm"
+            app:tint="@android:color/white" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
