@@ -81,7 +81,7 @@ public class doctorEditProfile extends AppCompatActivity {
         if(isContactNumberChanged() || isEmailChanged() || isDateOfBirthChanged() || isAddressChanged() || isGenderChanged()){
 
             Toast.makeText(this, "Update Successful!", Toast.LENGTH_SHORT).show();
-            Intent editedintent =  new Intent(doctorEditProfile.this, DoctorViewProfile.class);
+            Intent editedintent =  new Intent(doctorEditProfile.this,DoctorViewProfile.class);
             editedintent.putExtra("_docName",_Name);
             editedintent.putExtra("_contactNo",_ContactNo);
             editedintent.putExtra("_email",_Email);
@@ -142,10 +142,4 @@ public class doctorEditProfile extends AppCompatActivity {
             return false;
         }
     }
-
-    public void vieHome(View view){
-        Intent in = new Intent(doctorEditProfile.this, app1page.class);
-        startActivity(in);
-    }
-
 }

@@ -42,7 +42,7 @@ public class DoctorViewActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         patient1 = new  ArrayList<Patient>();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Patient");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Patient1");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
 
